@@ -24,7 +24,7 @@
 body {
   font-family: 'DM Sans', sans-serif;
   font-size: 17px;
-  line-height: 1.6;
+  line-height: 1.7;
   display: flex;
   min-height: 100vh;
   background: var(--light-bg);
@@ -119,7 +119,7 @@ body {
   transition: transform 0.25s ease;
 }
 
-..brand-icon:hover .brand-logo {
+.brand-icon:hover .brand-logo {
   transform: scale(1.22);
 }
 
@@ -129,6 +129,10 @@ body {
 
 .brand:hover .brand-sub-text {
   color: #ffffff;
+}
+
+.brand-icon:hover .brand-logo {
+  transform: scale(1.22);
 }
 
 .brand-text {
@@ -229,22 +233,23 @@ body {
 /* ── Login Card ────────────────────────────────────────────── */
 .login-card {
   width: 100%;
-  max-width: 520px;
+  max-width: 560px;
   animation: fadeUp 0.5s ease both;
 }
 
 .login-heading {
-  font-size: 34px;
-  font-weight: 700;
+  font-size: 42px;
+  font-weight: 900;
   color: var(--light-text);
-  letter-spacing: -0.5px;
-  margin-bottom: 6px;
+  letter-spacing: -0.6px;
+  margin-bottom: 12px;
 }
 
 .login-sub {
-  font-size: 15px;
+  font-size: 17px;
   color: var(--light-muted);
-  margin-bottom: 32px;
+  margin-bottom: 36px;
+  line-height: 1.75;
 }
 
 /* ── Role Selector ─────────────────────────────────────────── */
@@ -265,13 +270,13 @@ body {
 
 .role-card {
   border: 1.5px solid var(--light-border);
-  border-radius: 10px;
-  padding: 14px 16px;
+  border-radius: 16px;
+  padding: 16px 18px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   cursor: pointer;
-  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s, transform 0.2s;
   background: #fff;
   user-select: none;
 }

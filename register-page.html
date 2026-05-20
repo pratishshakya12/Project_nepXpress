@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NepXpress – Register</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="register-page.css"/>
+</head>
+<body>
+
+  <!-- ════════════════════════════
+       LEFT SIDEBAR
+  ════════════════════════════ -->
+  <aside class="sidebar">
+
+    <!-- Brand Card -->
+    <div class="brand-card">
+      <div class="brand-logo-box">
+        <!-- nepXpress truck logo SVG (white background box) -->
+        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Truck body -->
+          <rect x="4" y="18" width="30" height="22" rx="3" fill="#1a1a1a"/>
+          <!-- Cargo box window tint -->
+          <rect x="8" y="22" width="14" height="10" rx="1.5" fill="#e8a020" opacity="0.25"/>
+          <!-- Cab section -->
+          <path d="M34 24 L34 40 L52 40 L52 32 L44 24 Z" fill="#e8a020"/>
+          <!-- Cab window -->
+          <path d="M36 26 L36 32 L50 32 L44 26 Z" fill="#fff" opacity="0.6"/>
+          <!-- Wheels -->
+          <circle cx="13" cy="42" r="5" fill="#333" stroke="#fff" stroke-width="1.5"/>
+          <circle cx="13" cy="42" r="2" fill="#fff"/>
+          <circle cx="42" cy="42" r="5" fill="#333" stroke="#e8a020" stroke-width="1.5"/>
+          <circle cx="42" cy="42" r="2" fill="#e8a020"/>
+          <!-- nepX text hint: small X mark on box -->
+          <text x="16" y="31" font-size="7" fill="#e8a020" font-weight="bold" font-family="sans-serif">nep</text>
+          <text x="16" y="38" font-size="7" fill="#fff" font-weight="bold" font-family="sans-serif">Xpress</text>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-name">NepXpress</div>
+        <div class="brand-tagline">Logistics &amp; Delivery Management</div>
+      </div>
+    </div>
+
+    <!-- Spacer: pushes features to bottom -->
+    <div class="sidebar-spacer"></div>
+
+    <!-- Feature List -->
+    <div class="features">
+
+      <div class="feature-item">
+        <div class="feature-icon-box">
+          <!-- Truck icon -->
+          <svg class="icon-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13" rx="2"/>
+            <path d="M16 8h4l3 5v3h-7V8z"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="feature-title">Fast Delivery</div>
+          <div class="feature-desc">Track your packages in real-time with our advanced logistics network</div>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon-box">
+          <!-- Location pin icon -->
+          <svg class="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <div class="feature-title">Live Tracking</div>
+          <div class="feature-desc">Know exactly where your delivery is at every moment</div>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon-box">
+          <!-- Shield icon -->
+          <svg class="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="feature-title">Secure Handling</div>
+          <div class="feature-desc">Your packages are safe with our professional delivery agents</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <p class="sidebar-footer">© 2026 nepXpress. All rights reserved.</p>
+
+  </aside>
+
+
+  <!-- ════════════════════════════
+       RIGHT PANEL
+  ════════════════════════════ -->
+  <main class="right-panel">
+    <div class="form-container">
+
+      <!-- Title -->
+      <h2 class="form-title">Create an Account</h2>
+      <p class="form-subtitle">Register to access your account</p>
+
+      <!-- Role Selector -->
+      <p class="role-label">Select your role</p>
+      <div class="role-grid">
+
+        <div class="role-card active" id="role-customer" onclick="selectRole('customer')">
+          <div class="role-radio">
+            <div class="role-radio-dot"></div>
+          </div>
+          <div class="role-icon">
+            <!-- Person icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <div>
+            <div class="role-card-title">Customer</div>
+            <div class="role-card-sub">Send packages</div>
+          </div>
+        </div>
+
+        <div class="role-card" id="role-agent" onclick="selectRole('agent')">
+          <div class="role-radio">
+            <div class="role-radio-dot"></div>
+          </div>
+          <div class="role-icon">
+            <!-- Delivery truck icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="2"/>
+              <path d="M16 8h4l3 5v3h-7V8z"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <div>
+            <div class="role-card-title">Delivery Agent</div>
+            <div class="role-card-sub">Deliver packages</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Login / Register Tabs -->
+      <div class="auth-tabs">
+        <a href="login.html" class="auth-tab">Login</a>
+        <span class="auth-tab active">Register</span>
+      </div>
+
+      <!-- ── PERSONAL INFORMATION ── -->
+      <p class="section-heading">Personal Information</p>
+
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <div class="input-wrap">
+            <span class="input-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </span>
+            <input type="text" id="full-name" placeholder="John Doe" autocomplete="name"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <div class="input-wrap">
+            <span class="input-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </span>
+            <input type="tel" id="phone" placeholder="+1 (555) 000-0000" autocomplete="tel"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row one-col">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <div class="input-wrap">
+            <span class="input-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </span>
+            <input type="email" id="email" placeholder="john.doe@example.com" autocomplete="email"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── ADDRESS DETAILS ── -->
+      <p class="section-heading">Address Details</p>
+
+      <div class="form-row one-col">
+        <div class="form-group">
+          <label for="street">Street Address</label>
+          <div class="input-wrap">
+            <span class="input-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </span>
+            <input type="text" id="street" placeholder="123 Main Street" autocomplete="street-address"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label for="city">City</label>
+          <div class="input-wrap">
+            <span class="input-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18M9 21V9"/>
+              </svg>
+            </span>
+            <input type="text" id="city" placeholder="New York" autocomplete="address-level2"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="state">State / Province</label>
+          <div class="input-wrap">
+            <span class="input-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+              </svg>
+            </span>
+            <input type="text" id="state" placeholder="NY" autocomplete="address-level1"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label for="zip">ZIP / Postal Code</label>
+          <div class="input-wrap">
+            <span class="input-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </span>
+            <input type="text" id="zip" placeholder="10001" autocomplete="postal-code"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="country">Country</label>
+          <div class="input-wrap select-wrap">
+            <span class="input-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </span>
+            <select id="country" autocomplete="country">
+              <option value="" disabled selected>Select country</option>
+              <option>Nepal</option>
+              <option>United States</option>
+              <option>United Kingdom</option>
+              <option>India</option>
+              <option>Australia</option>
+              <option>Canada</option>
+              <option>Germany</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── VEHICLE DETAILS (Delivery Agent only) ── -->
+      <div class="vehicle-section" id="vehicle-section">
+        <p class="section-heading">Vehicle Details</p>
+
+        <div class="form-row two-col">
+          <div class="form-group">
+            <label for="vehicle-type">Vehicle Type</label>
+            <div class="input-wrap select-wrap">
+              <span class="input-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="1" y="3" width="15" height="13" rx="2"/>
+                  <path d="M16 8h4l3 5v3h-7V8z"/>
+                  <circle cx="5.5" cy="18.5" r="2.5"/>
+                  <circle cx="18.5" cy="18.5" r="2.5"/>
+                </svg>
+              </span>
+              <select id="vehicle-type">
+                <option value="" disabled selected>Select vehicle type</option>
+                <option>Motorcycle</option>
+                <option>Scooter</option>
+                <option>Car</option>
+                <option>Van</option>
+                <option>Truck</option>
+                <option>Bicycle</option>
+                <option>Electric Vehicle</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="license-plate">License Plate No.</label>
+            <div class="input-wrap">
+              <span class="input-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="10" rx="2"/>
+                  <line x1="7" y1="12" x2="7.01" y2="12"/>
+                  <line x1="12" y1="12" x2="12.01" y2="12"/>
+                  <line x1="17" y1="12" x2="17.01" y2="12"/>
+                </svg>
+              </span>
+              <input type="text"
+                     id="license-plate"
+                     placeholder="e.g. BA 1 CHA 1234"
+                     style="text-transform: uppercase;"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SECURITY ── -->
+      <p class="section-heading">Security</p>
+
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <span class="input-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </span>
+            <input type="password" id="password"
+                   placeholder="Create a password" autocomplete="new-password"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <div class="input-wrap">
+            <span class="input-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </span>
+            <input type="password" id="confirm-password"
+                   placeholder="Confirm your password" autocomplete="new-password"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terms -->
+      <div class="terms-row">
+        <input type="checkbox" id="terms"/>
+        <label for="terms">
+          I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+        </label>
+      </div>
+
+      <!-- Submit Button -->
+      <button class="btn-submit" id="submit-btn" onclick="handleSubmit()">
+        Create Customer Account
+      </button>
+
+      <p class="login-link">
+        Already have an account? <a href="login.html">Login here</a>
+      </p>
+
+    </div><!-- /form-container -->
+  </main>
+
+  <script>
+    let currentRole = 'customer';
+
+    function selectRole(role) {
+      currentRole = role;
+
+      document.getElementById('role-customer').classList.toggle('active', role === 'customer');
+      document.getElementById('role-agent').classList.toggle('active', role === 'agent');
+
+      const vehicleSection = document.getElementById('vehicle-section');
+      vehicleSection.classList.toggle('visible', role === 'agent');
+
+      document.getElementById('submit-btn').textContent =
+        role === 'agent' ? 'Create Delivery Agent Account' : 'Create Customer Account';
+    }
+
+    function handleSubmit() {
+      const terms = document.getElementById('terms');
+      if (!terms.checked) {
+        alert('Please agree to the Terms of Service and Privacy Policy to continue.');
+        return;
+      }
+      const pw  = document.getElementById('password').value;
+      const cpw = document.getElementById('confirm-password').value;
+      if (pw && cpw && pw !== cpw) {
+        alert('Passwords do not match. Please try again.');
+        return;
+      }
+      alert((currentRole === 'agent' ? 'Delivery Agent' : 'Customer') + ' account created successfully!');
+    }
+  </script>
+
+</body>
+</html>

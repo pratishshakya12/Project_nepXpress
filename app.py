@@ -26,8 +26,6 @@ def admin_dashboard():
     return render_template('admin-dashboard.html')
 
 
-
-
 if __name__ == '__main__':
     app.run(debug=True)
 
